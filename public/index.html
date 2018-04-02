@@ -6,8 +6,12 @@
     <title>Top Artist List</title>
     <link rel="stylesheet" href="./screen.css">
   </head>
-  <body>
+  <body ng-app="mainApp" ng-controller="mainController">
     <header>Last.FM Top 50</header>
+
+    <section ng-repeat="artist in artists track in $index" ng-include="'./templates.Top50.html'">
+    
+    </section>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
